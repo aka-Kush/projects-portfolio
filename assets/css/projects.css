@@ -1,0 +1,276 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+:root {
+    /*========== Colors ==========*/
+    /*Color mode HSL(hue, saturation, lightness)*/
+    --first-color: hsl(38, 92%, 58%);
+    --first-color-light: hsl(38, 100%, 78%);
+    --first-color-alt: hsl(32, 75%, 50%);
+    --second-color: hsl(195, 75%, 52%);
+    --dark-color: hsl(212, 40%, 12%);
+    --white-color: hsl(212, 4%, 95%);
+    --body-color: hsl(212, 42%, 15%);
+    --container-color: hsl(212, 42%, 20%);
+  
+    /*========== Font and typography ==========*/
+    /*.5rem = 8px | 1rem = 16px ...*/
+    --body-font: "Bai Jamjuree", sans-serif;
+    --h2-font-size: 1.25rem;
+    --normal-font-size: 1rem;
+  }
+  
+
+*{
+    font-family: "Inter", sans-serif;
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    color: #fff;
+    background-color: #e9ff99;
+    background-image:
+    radial-gradient(at 9% 89%, hsla(215, 90%, 73%, 1) 0px, transparent 50%),
+    radial-gradient(at 72% 6%, hsla(331, 74%, 64%, 1) 0px, transparent 50%),
+    radial-gradient(at 24% 19%, hsla(14, 90%, 74%, 1) 0px, transparent 50%),
+    radial-gradient(at 65% 6%, hsla(6, 79%, 76%, 1) 0px, transparent 50%),
+    radial-gradient(at 20% 98%, hsla(316, 72%, 64%, 1) 0px, transparent 50%),
+    radial-gradient(at 44% 9%, hsla(40, 96%, 77%, 1) 0px, transparent 50%),
+    radial-gradient(at 10% 9%, hsla(76, 65%, 63%, 1) 0px, transparent 50%);
+    min-height: 100vh;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100vw;
+}
+
+.card-container {
+    display: flex;
+    min-height: 60vh;
+    min-width: 68vw;
+    margin-bottom: 60px;
+   background-color: rgba(0, 0, 0, 0.56);
+    padding: 50px;
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(11.6px);
+    -webkit-backdrop-filter: blur(11.6px);
+}
+
+.card-content {
+  margin-inline: 1.75rem;
+  border-radius: 1.25rem;
+  overflow: hidden;
+  /* height: 600px; */
+}
+
+.card-article {
+  border-radius: 1.25rem;
+  overflow: hidden;
+  margin: 60px 0px 30px 0;
+}
+
+.card-image {
+  position: relative;
+  background-color: var(--white-color);
+  margin-bottom: -.75rem;
+}
+
+.card-img {
+  min-width: 350px;
+  margin: 0;
+  position: relative;
+  z-index: 5;
+}
+
+.card-data {
+  height: 280px;
+  background-color: var(--container-color);
+  padding: 1.5rem 2rem;
+  border-bottom-left-radius: 1rem;
+  border-bottom-right-radius: 1rem;
+  text-align: center;
+  position: relative;
+  z-index: 10;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+
+}
+
+.card-name {
+  font-size: var(--h2-font-size);
+  min-height: 50px;
+  color: white;
+  margin-bottom: .75rem;
+}
+
+.card-desc {
+  font-weight: 500;
+  margin-bottom: 1.75rem;
+  color: whitesmoke;
+  height: 60px;
+  position: relative;
+}
+
+.btn-div{
+  padding-top: 20px;
+} 
+
+.card-button {
+  display: inline-block;
+  background-color: var(--first-color);
+  padding: .75rem 1.5rem;
+  border-radius: .25rem;
+  color: var(--dark-color);
+  font-weight: 600;
+}
+
+.navbar{
+    display: inline-block;
+    position: absolute;
+    right: 60px;
+    padding-top: 20px;
+}
+
+ul.nav-links{
+    margin: 0;
+    float: right;
+    display: flex;
+    list-style: none;
+}
+
+ul.nav-links a{
+    color: #fff;
+    font-size: 17px;
+    font-weight: 300;
+}
+
+ul.nav-links a:hover{
+    color: lightcoral;
+}
+
+li.nav-link i{
+    margin-right: 10px;
+    font-size: 17px;
+}
+
+#next-btn,
+#prev-btn{  
+  width: initial;
+  height: initial;
+  font-size: 3rem;
+  color: whitesmoke;
+}
+
+#next-btn:hover,
+#prev-btn:hover{
+    color: lightcoral;
+}
+
+#pagination span{
+    background-color: hsl(281, 41%, 96%);
+    opacity: 1;
+} 
+
+
+#pagination span.swiper-pagination-bullet-active {
+  background-color: lightcoral;
+}
+
+/* media queries */
+@media screen and (max-width: 320px) {
+  .card-data {
+    padding: 1rem;
+  }
+
+  #next-btn{
+    display: none;
+  }
+}
+
+@media screen and (max-width: 376px) {
+  .card-data {
+    padding: 1rem;
+  }
+  body{
+    margin-top: 20px;
+  }
+
+  #next-btn{
+    display: none;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  #next-btn,
+  #prev-btn {
+    display: none;
+    }
+
+  li.nav-link a{
+    font-size: 15px;
+    }
+    ul.nav-links i{
+        font-size: 14px;
+    }
+    .card-button{
+        font-size: 13px;
+        padding: .50rem 1rem;
+    }
+    .card-container{
+        width: 90%;    
+    }
+}
+
+@media screen and (max-width: 600px) {
+    #next-btn,
+    #prev-btn {
+      display: none;
+    }
+
+  }
+
+@media screen and (min-width: 768px) {
+    .card-content {
+      margin-inline: 3rem;
+    }
+  
+    #next-btn,
+    #prev-btn {
+      display: block;
+    }
+}
+
+@media screen and (max-width: 1120px) {
+    .card-container {
+      width: 90%;
+    }
+}
+
+@media screen and (min-width: 1120px) {
+  .card-container {
+    max-width: 1120px;
+  }
+}
+
+@media screen and (max-width: 960px) {
+  .card-container {
+    max-width: 1120px;
+  }
+}
